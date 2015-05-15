@@ -29,5 +29,4 @@
             result.url.should.equal('about-url');
         });
     });
-
 })();
