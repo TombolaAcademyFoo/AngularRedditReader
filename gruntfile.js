@@ -5,16 +5,18 @@
     var copyTask = require('./.grunt/copy-task');
     var lessTask = require('./.grunt/less-task');
     var concatTask = require('./.grunt/concat-task');
+    var karmaTask = require('./.grunt/karma-task');
     var watchTask = require('./.grunt/watch-task');
     module.exports = function(grunt){
         grunt.log.writeln("Initialising");
         grunt.initConfig({
-            jshint:lintTask,
-            lesslint:lessTask,
-            clean:cleanTask,
-            copy:copyTask,
+            jshint: lintTask,
+            lesslint: lessTask,
+            clean: cleanTask,
+            copy: copyTask,
             less: lessTask,
             concat: concatTask,
+            karma: karmaTask,
             watch: watchTask
         });
 
@@ -25,12 +27,15 @@
         grunt.loadNpmTasks('grunt-contrib-copy');
         grunt.loadNpmTasks('grunt-contrib-less');
         grunt.loadNpmTasks('grunt-contrib-concat');
+        grunt.loadNpmTasks('grunt-karma');
         grunt.loadNpmTasks('grunt-contrib-watch');
 
         grunt.log.writeln("Loaded NPM Tasks");
 
         grunt.registerTask('deployless',['lesslint', 'clean:less', 'less']);
-        grunt.registerTask('nostart', ['jshint', 'clean', 'copy', 'deployless', 'concat']);
+        grunt.registerTask('dirty', ['jshint', 'clean', 'copy', 'deployless', 'concat']);
+        grunt.registerTask('nostart', ['dirty', 'karma']);
+        grunt.registerTask('test', ['jshint', 'karma']); //used just for testing
         grunt.registerTask('default', ['nostart', 'watch']);
     };
 }());
