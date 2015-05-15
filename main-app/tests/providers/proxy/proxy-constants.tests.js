@@ -1,5 +1,5 @@
 (function () {
-    'use strict';
+   'use strict';
     describe('proxy-constant tests',function(){
         var proxyConstants;
 
@@ -13,5 +13,4 @@
             proxyConstants.defaultUrl.should.equal('http://www.reddit.com/r/');
         });
     });
-
 })();
