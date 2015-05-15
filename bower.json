@@ -1,0 +1,29 @@
+{
+  "name": "Foo",
+  "version": "1.0.0",
+  "authors": [
+    "keithbarrow <keith.barrow@tombola.com>"
+  ],
+  "description": "Testing the dev game servers",
+  "main": "Angular.html",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "foo"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15",
+    "angular-sanitize": "~1.3.15"
+  }
+}
