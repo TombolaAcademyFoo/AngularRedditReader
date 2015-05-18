@@ -24,6 +24,7 @@
                 './main-app/app/scripts/filters/**/*.js',
                 './main-app/app/scripts/directives/**/*.js',
                 './main-app/app/scripts/controllers.js',
+                './main-app/tests/mocks.js',
                 './main-app/tests/**/*.tests.js'
             ],
 
