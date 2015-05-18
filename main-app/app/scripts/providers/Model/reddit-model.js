@@ -1,4 +1,3 @@
-
 (function () {
     'use strict';
     angular.module('Tombola.Reddit.Model')
@@ -26,14 +25,8 @@
                     .catch(function(message){
                         alert(message);
                     });
-
-
-
-
                 };
             };
-
             return new RedditModel();
-
         }]);
 })();

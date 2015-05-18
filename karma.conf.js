@@ -19,6 +19,7 @@
             //This is set in each sub task of the karma tasks grunt setup
             files: ['./bower_components/angular/angular.js',
                 './bower_components/angular-mocks/angular-mocks.js',
+                './main-app/mocks/**/*.mock.js',
                 './main-app/app/scripts/modules.js',
                 './main-app/app/scripts/providers/**/*.js',
                 './main-app/app/scripts/filters/**/*.js',
