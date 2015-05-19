@@ -23,7 +23,7 @@
                         me.about = results[1];
                     })
                     .catch(function(message){
-                        alert(message);
+                        alert(message); //Really, shouldn't do this - not testable for starters + poor way of reporting errors.
                     });
                 };
             };
