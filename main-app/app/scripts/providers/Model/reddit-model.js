@@ -16,6 +16,7 @@
                 this.subReddit = 'gaming';
                 this.posts =[];
                 this.about ={};
+
                 this.reload = function(){
                     $q.all([getPosts(), getAbout()]).
                     then(function(results){
@@ -26,6 +27,7 @@
                         alert(message); //Really, shouldn't do this - not testable for starters + poor way of reporting errors.
                     });
                 };
+
             };
             return new RedditModel();
         }]);

@@ -1,12 +1,12 @@
 (function(){
     'use strict';
     angular.module('Tombola.Reddit')
-        .controller('RedditController', [ '$scope', 'RedditModel', function($scope, redditModel){
+        .controller('RedditController', [ '$scope', 'RedditModel','RedditSounds', function($scope, redditModel, redditSounds){
             $scope.model = redditModel;
             $scope.reload = function(){
-                redditModel.reload();
+                redditSounds.playClick();
+                redditModel.reload(false);
             };
-
-            $scope.reload();
+            redditModel.reload(true);
         }]);
 }());

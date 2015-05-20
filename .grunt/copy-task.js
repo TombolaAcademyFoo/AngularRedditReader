@@ -14,6 +14,10 @@
                     dest: '.build/main-app/thirdparty',
                     expand: true
             },
+            sounds:{
+                src: ['main-app/**/app/sounds/*.mp3'],
+                dest: '.build/'
+            },
             resources:{},
             views:{},
             images:{}
