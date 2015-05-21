@@ -14,9 +14,9 @@ The following features are important:
       1. $scope
       2. $http
       3. $q
-      4. TODO $document - Audio
-      4. TODO: $timeout - Audio
-      5. TODO: $interval - clock updater?
+      4. $document - Audio
+      4. $interval - Audio
+      5. TODO:  $timout - ?????
   8. The use of custom providers:
     1. services
     2. factories
@@ -28,8 +28,8 @@ The following features are important:
     2. Roles and responsibilities of Gulp, Karma, Mocha, Chai and Sinon
     3. What consitiutes a good unit test
     3. Examples
-        1. TODO: Simple example - Constants
-        2. TODO: Other Provider with injected dependency
+        1. Simple example - Constants
+        2. TODO: Other Provider with injected dependency / sinon mock
         3. TODO: $HTTPbackend for the API PRoxy
         4. TODO: Contoller
         5. TODO: Directive
