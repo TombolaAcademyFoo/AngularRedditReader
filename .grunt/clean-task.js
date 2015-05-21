@@ -6,6 +6,7 @@
         bower:['.build/main-app/thirdparty'],
         appjs:['.build/main-app/app/scripts/*.js'],
         less:['.build/main-app/app/css/*.*'],
+        sounds:['.build/main-app/app/sounds/*.*'],
         clean: ['.build']
     };
 }());

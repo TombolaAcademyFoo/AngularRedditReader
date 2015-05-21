@@ -50,7 +50,7 @@
             });
 
             it('nothing changes when nothing is resolved', function(){
-                redditModel.reload();
+                redditModel.update();
                 redditModel.posts.should.deep.equal([]);
                 redditModel.about.should.deep.equal({});
             });
@@ -59,7 +59,7 @@
             // but in reality I want to make sure I've waited for both rather than waited for either
 
             it('not updated when only post promise resolved', function(){
-                redditModel.reload();
+                redditModel.update();
                 postDeferred.resolve(postResponse);
                 $rootScope.$apply(); //This forces the resolve to finish https://docs.angularjs.org/api/ng/service/$q#differences-between-kris-kowal-s-q-and-q
                 redditModel.posts.should.deep.equal([]);
@@ -67,7 +67,7 @@
             });
 
             it('not updated when only about promise resolved', function(){
-                redditModel.reload();
+                redditModel.update();
                 aboutDeferred.resolve(aboutResponse);
                 $rootScope.$apply(); //This forces the resolve to finish https://docs.angularjs.org/api/ng/service/$q#differences-between-kris-kowal-s-q-and-q
                 redditModel.posts.should.deep.equal([]);
@@ -75,7 +75,7 @@
             });
 
             it('updated when both promisies resolved', function(){
-                redditModel.reload();
+                redditModel.update();
                 postDeferred.resolve(postResponse);
                 aboutDeferred.resolve(aboutResponse);
                 $rootScope.$apply(); //This forces the resolve to finish https://docs.angularjs.org/api/ng/service/$q#differences-between-kris-kowal-s-q-and-q

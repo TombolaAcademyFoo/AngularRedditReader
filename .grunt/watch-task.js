@@ -12,6 +12,11 @@
             tasks: ['deployless']
         },
 
+        sounds: {
+            files: ['./main-app/**/app/sounds/*.*'],
+            tasks: ['clean:sounds', 'copy:sounds']
+        },
+
         appjs:{
             files: ['./main-app/**/app/scripts/**/*.js'],
             tasks: ['clean:appjs', 'concat:appjs']
