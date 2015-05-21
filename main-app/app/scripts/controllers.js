@@ -3,10 +3,15 @@
     angular.module('Tombola.Reddit')
         .controller('RedditController', [ '$scope', 'RedditModel','RedditSounds', function($scope, redditModel, redditSounds){
             $scope.model = redditModel;
-            $scope.reload = function(){
+            $scope.update = function(){
                 redditSounds.playClick();
-                redditModel.reload(false);
+                redditModel.update(false);
             };
-            redditModel.reload(true);
+
+            $scope.playNoise = function(){
+                redditSounds.playNoise();
+            };
+
+            redditModel.update(true);
         }]);
 }());

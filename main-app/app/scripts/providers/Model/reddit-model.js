@@ -17,7 +17,7 @@
                 this.posts =[];
                 this.about ={};
 
-                this.reload = function(){
+                this.update = function(){
                     $q.all([getPosts(), getAbout()]).
                     then(function(results){
                         me.posts = results[0];

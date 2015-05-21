@@ -9,7 +9,7 @@
                 audioSprite.play(4.6, 0.2);
             };
 
-            this.playDone = function(){
+            this.playNoise = function(){
                 audioSprite.play(0, 3.3);
             };
         }]);
