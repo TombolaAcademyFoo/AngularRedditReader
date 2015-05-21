@@ -2,7 +2,7 @@
 (function () {
     'use strict';
     angular.module('Tombola.Reddit.Proxy')
-        .factory('Proxy', ['$http', '$q', 'proxyConstants','PostFactory', 'AboutFactory', function($http, $q, proxyConstants,postFactory, aboutFactory){
+        .factory('Proxy', ['$http', '$q', 'ProxyConstants','PostFactory', 'AboutFactory', function($http, $q, proxyConstants,postFactory, aboutFactory){
             var RedditProxy = function() {
                 var me = this;
 

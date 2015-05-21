@@ -18,11 +18,11 @@
                     }
                 };
 
-            me.createAudioNode = function (sourceUrl) {
+            me.createAudioNode = function (sourceUrl, type) {
                 var createAudioSource = function(){
                         var sourceNode = angular.element('<source>');
                         sourceNode.attr('src', sourceUrl);
-                        sourceNode.attr('type', 'audio/mp3');
+                        sourceNode.attr('type', type);
                         return sourceNode;
                     },
                 angularAudioNode = angular.element('<audio>');

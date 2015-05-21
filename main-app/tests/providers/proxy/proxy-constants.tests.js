@@ -6,7 +6,7 @@
         beforeEach(module('Tombola.Reddit.Proxy'));
 
         beforeEach(inject(function($injector){
-            proxyConstants = $injector.get('proxyConstants');
+            proxyConstants = $injector.get('ProxyConstants');
         }));
 
         it('defaultUrl Points to correct place', function(){

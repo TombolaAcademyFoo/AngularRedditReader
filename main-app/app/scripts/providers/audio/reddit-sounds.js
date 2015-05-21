@@ -2,15 +2,20 @@
     'use strict';
 
     angular.module('Tombola.Reddit.Audio')
-        .service('RedditSounds',['AudioSprite', function(audioSprite){
-            audioSprite.createAudioNode('sounds/reddit-sprite.mp3');
+        .service('RedditSounds',['AudioConstants', 'AudioSprite', function(audioConstants, audioSprite){
+
+            var playSound = function (spriteDefinition){
+                audioSprite.play(spriteDefinition.start, spriteDefinition.duration);
+            };
 
             this.playClick = function(){
-                audioSprite.play(4.6, 0.2);
+                playSound(audioConstants.spriteDefinitions.click);
             };
 
             this.playNoise = function(){
-                audioSprite.play(0, 3.3);
+                playSound(audioConstants.spriteDefinitions.noise);
             };
+
+            audioSprite.createAudioNode(audioConstants.sourceUrl, audioConstants.sourceType);
         }]);
 })();

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular.module('Tombola.Reddit.Proxy')
-        .constant('proxyConstants', {
+        .constant('ProxyConstants', {
                defaultUrl: 'http://www.reddit.com/r/'
        });
 })();
