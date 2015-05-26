@@ -14,6 +14,7 @@
 
 
                 this.subReddit = 'gaming';
+                this.autoUpdate = true;
                 this.posts =[];
                 this.about ={};
 
@@ -26,6 +27,15 @@
                     .catch(function(message){
                         alert(message); //Really, shouldn't do this - not testable for starters + poor way of reporting errors.
                     });
+                };
+
+                this.autoUpdateChanged = function (){
+                    if(this.autoUpdate){
+                        //TODO: Check the current timeout state, if not set, setup
+                    }
+                    else{
+                        //TODO: Check the current timeout state, if not set - cancel
+                    }
                 };
 
             };

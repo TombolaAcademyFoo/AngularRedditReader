@@ -16,7 +16,7 @@ The following features are important:
       3. $q
       4. $document - Audio
       4. $interval - Audio
-      5. TODO:  $timout - ?????
+      5. TODO:  $timeout - Automatic updater
   8. The use of custom providers:
     1. services
     2. factories

@@ -8,9 +8,14 @@
 <body ng-controller="RedditController">
     <div class="form">
         <h1>Reddit Client</h1>
-        <input type="text" ng-model="model.subReddit" />
-        <input type="button"  value="update" ng-click="update()"/>
-        <input type="button"  value="totally gratuitous sprite playing button" ng-click="playNoise()"/>
+        <div>
+            <input type="text" ng-model="model.subReddit" />
+            <input type="button"  value="update" ng-click="update()"/>
+            <input type="checkbox" ng-model="model.autoUpdate" ng-change="model.autoUpdateChanged()"><label>Auto Update</label>
+        </div>
+        <div>
+            <input type="button"  value="totally gratuitous sprite playing button" ng-click="playNoise()" />
+        </div>
     </div>
 
     <div class="results">
