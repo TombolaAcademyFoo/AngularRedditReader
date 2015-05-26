@@ -16,7 +16,7 @@
                 this.subReddit = 'gaming';
                 this.autoUpdate = true;
                 this.posts =[];
-                this.about ={};
+                this.about ={ headerImage:''};
 
                 this.update = function(){
                     $q.all([getPosts(), getAbout()]).
